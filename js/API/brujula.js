@@ -10,7 +10,7 @@ var brj = {
 	start: function(){
 		if(brj.watchID == null){
 			var options = { frequency: 500 };  // Update every medio seconds
-			brj.watchID = navigator.compass.watchHeading(onSuccess, onError, options);
+			brj.watchID = navigator.compass.watchHeading(brj.onSuccessonSuccess, brj.onErroronError, options);
 		}
 	},
 	stop: function(){
