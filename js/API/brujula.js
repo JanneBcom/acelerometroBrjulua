@@ -16,6 +16,7 @@ var brj = {
 	stop: function(){
 		if(brj.wathID != null){ //solo cuando este activo aplica el stop
 			navigator.compass.clearWatch(brj.watchID);
+			brj.watchID=null;
 			//cambia la etiqueta al valor inicial.
 			$('#brujula .scroll h2').html('Detenido');
 		}

@@ -19,6 +19,7 @@ var acc = {
 	stop: function(){
 		if(acc.wathID != null){ //solo cuando este activo aplica el stop
 			navigator.accelerometer.clearWatch(acc.watchID);
+			acc.watchID=null;
 			//cambia la etiqueta al valor inicial.
 			$('#acelerometro .scroll h2').html('Detenido');
 		}
