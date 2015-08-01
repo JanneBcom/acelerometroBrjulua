@@ -8,14 +8,12 @@ var brj = {
 		alert('Compass error: ' + compassError.code);
 	},
 	start: function(){
-		alert("entro2");
 		if(brj.watchID == null){
 			var options = { frequency: 500 };  // Update every medio seconds
 			brj.watchID = navigator.compass.watchHeading(brj.onSuccess, brj.onError, options);
 		}
 	},
 	stop: function(){
-		alert("entro2");
 		if(brj.wathID != null){ //solo cuando este activo aplica el stop
 			navigator.compass.clearWatch(brj.watchID);
 			brj.watchID = null;
