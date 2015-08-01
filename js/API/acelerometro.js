@@ -14,7 +14,7 @@ var acc = {
 		alert("entro");
 		if(acc.watchID == null){
 			var options = { frequency: 500 };  // Update every 3 seconds
-			acc.watchID = navigator.accelerometer.watchAcceleration(acc.onSuccessonSuccess, acc.onErroronError, options);
+			acc.watchID = navigator.accelerometer.watchAcceleration(acc.onSuccess, acc.onErro, options);
 		}
 	},
 	stop: function(){

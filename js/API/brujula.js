@@ -11,7 +11,7 @@ var brj = {
 		alert("entro2");
 		if(brj.watchID == null){
 			var options = { frequency: 500 };  // Update every medio seconds
-			brj.watchID = navigator.compass.watchHeading(brj.onSuccessonSuccess, brj.onErroronError, options);
+			brj.watchID = navigator.compass.watchHeading(brj.onSuccess, brj.onError, options);
 		}
 	},
 	stop: function(){
