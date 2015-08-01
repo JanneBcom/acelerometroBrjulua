@@ -11,12 +11,14 @@ var acc = {
 		alert('onError!');
 	},
 	start: function(){
+		alert("entro");
 		if(acc.watchID == null){
 			var options = { frequency: 500 };  // Update every 3 seconds
 			acc.watchID = navigator.accelerometer.watchAcceleration(acc.onSuccessonSuccess, acc.onErroronError, options);
 		}
 	},
 	stop: function(){
+		alert("entro");
 		if(acc.wathID != null){ //solo cuando este activo aplica el stop
 			navigator.accelerometer.clearWatch(acc.watchID);
 			acc.watchID=null;
