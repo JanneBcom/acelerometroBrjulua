@@ -4,7 +4,7 @@ var brj = {
 		//cambia la orientacion
 		$('#brujula .scroll h2').html('Heading: ' + heading.magneticHeading);
 	},
-	onError: function () {
+	onError: function (compassError) {
 		alert('Compass error: ' + compassError.code);
 	},
 	start: function(){

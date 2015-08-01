@@ -13,13 +13,13 @@ var acc = {
 	start: function(){
 		if(acc.watchID == null){
 			var options = { frequency: 500 };  // Update every 3 seconds
-			acc.watchID = navigator.accelerometer.watchAcceleration(acc.onSuccess, acc.onErro, options);
+			acc.watchID = navigator.accelerometer.watchAcceleration(acc.onSuccess, acc.onError, options);
 		}
 	},
 	stop: function(){
 		if(acc.wathID != null){ //solo cuando este activo aplica el stop
 			navigator.accelerometer.clearWatch(acc.watchID);
-			acc.watchID=null;
+			acc.watchID = null;
 			//cambia la etiqueta al valor inicial.
 			$('#acelerometro .scroll h2').html('Detenido');
 		}
